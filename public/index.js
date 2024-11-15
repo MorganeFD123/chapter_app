@@ -34,10 +34,10 @@ const createChaptersDOM = (chapters) => {
         const chapterNode = document.createElement('div')
         chapterNode.classList.add('chapter')
         chapterNode.innerHTML = `
-                            <h2>${chapter.title}</h2>
-                            <p class="number-of-chapter"></p>
+                            <h2>${chapter.name}</h2>
+                            <p class="number-of-chapter">${chapter.numberOfLessons}</p>
                             <div class="article-actions">
-                                <button class="btn btn-danger" data-id="${chapter.id}">Supprimer</button>
+                                <button class="btn btn-danger" data-id="${chapter._id}">Supprimer</button>
                             </div>  
         `
         return chapterNode
