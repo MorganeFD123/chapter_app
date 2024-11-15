@@ -1,5 +1,5 @@
 const chaptersContainer = document.querySelector('.chapters')
-const API_URL = 'http://localhost:3000/api'
+const API_URL = 'http://localhost:3000/api/chapter'
 
 const form = document.querySelector('form')
 
@@ -23,6 +23,7 @@ form.addEventListener('submit', async event => {
 const fetchChapters = async () => {
     const response = await fetch(API_URL)
     const chapters = await response.json()
+    //console.log(chapters)
     createChaptersDOM(chapters)
 }
 
